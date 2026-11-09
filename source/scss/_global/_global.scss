@@ -1,0 +1,83 @@
+:root {
+  --first-col-width: 217px;
+  --last-col-width: 452px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: clip;
+
+  &.modal-open {
+    overflow: hidden;
+  }
+}
+
+body {
+  font-family: 'Geologica', sans-serif;
+  font-weight: 400;
+  line-height: 1.25;
+  color: $black;
+  min-height: 100vh;
+  height: 100%;
+  margin: 0;
+  background-color: $white;
+  scroll-behavior: smooth;
+  display: flex;
+  flex-direction: column;
+  overflow-x: clip;
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+
+  > section:last-child {
+    flex-grow: 1;
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+a,
+input {
+  font: inherit;
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+a {
+  color: $black;
+}
+
+a:hover {
+  color: $primary-blue;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}

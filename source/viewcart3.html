@@ -1,0 +1,82 @@
+@@include('./_header.html')
+
+<section class="viewcart__top">
+  <div class="wrapper">
+    <ol class="breadcrumbs">
+      <li><a href="/">Главная</a></li>
+      <li><a href="./viewcart.html">Корзина</a></li>
+      <li><a href="./viewcart2.html">Дополнительные опции</a></li>
+      <li>
+        <p>Доставка</p>
+      </li>
+    </ol>
+    <h1>
+      <a class="h2" href="./viewcart2.html">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M23.9867 27.1698C24.1981 26.9584 24.3169 26.6716 24.3169 26.3725C24.3169 26.0735 24.1981 25.7867 23.9867 25.5753L18.4046 19.9932L23.9867 14.4111C24.1921 14.1984 24.3058 13.9136 24.3032 13.6179C24.3006 13.3222 24.1821 13.0394 23.973 12.8303C23.7639 12.6212 23.481 12.5026 23.1854 12.5C22.8897 12.4975 22.6048 12.6111 22.3921 12.8166L16.0128 19.1959C15.8014 19.4074 15.6826 19.6942 15.6826 19.9932C15.6826 20.2922 15.8014 20.579 16.0128 20.7905L22.3921 27.1698C22.6036 27.3812 22.8904 27.5 23.1894 27.5C23.4884 27.5 23.7752 27.3812 23.9867 27.1698Z" fill="currentColor" />
+        </svg>
+        <span>Доставка</span>
+      </a>
+    </h1>
+  </div>
+</section>
+
+<section class="viewcart">
+  <div class="wrapper">
+    <div class="viewcart__list vc-form">
+      <div class="vc-form__block">
+        <p class="vc-form__caption">Адрес доставки</p>
+        <div class="vc-form__group">
+          <label for="delivery_address">Полный адрес *</label>
+          <input type="text" name="delivery_address" id="delivery_address" placeholder="г. Москва, ул. Ленина, д. 10, кв. 15">
+          <p class="vc-form__note">Укажите город, улицу, дом и квартиру/офис</p>
+        </div>
+      </div>
+      <div class="vc-form__block">
+        <label for="delivery_comment" class="vc-form__caption">Комментарий к заказу</label>
+        <div class="vc-form__group">
+          <textarea type="text" rows="4" name="delivery_comment" id="delivery_comment" placeholder="Укажите дополнительную информацию о заказе или доставке"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="viewcart__summary">
+      <p class="viewcart__caption">Ваш заказ</p>
+      <ul class="viewcart__sum-products">
+        <li>
+          <img src="./img/idx_product.webp" width="64" height="64" alt="">
+          <div>
+            <p>Каркасный дом с купелью</p>
+            <p class="viewcart__text">1 шт.</p>
+          </div>
+        </li>
+        <li>
+          <img src="./img/idx_product.webp" width="64" height="64" alt="">
+          <div>
+            <p>Каркасный дом с купелью</p>
+            <p class="viewcart__text">1 шт.</p>
+          </div>
+        </li>
+      </ul>
+      <ul class="viewcart__sum-list">
+        <li>
+          <p class="viewcart__text">Товары (2)</p>
+          <p class="viewcart__price">2 750 000 руб.</p>
+        </li>
+        <li>
+          <p class="viewcart__text">Доставка</p>
+          <p class="viewcart__price viewcart__price--free">Бесплатно</p>
+        </li>
+        <li class="viewcart__total">
+          <p class="viewcart__caption">Итого</p>
+          <p class="viewcart__price">2 750 000 руб.</p>
+        </li>
+      </ul>
+      <div>
+        <a href="./viewcart4.html" class="btn btn-primary">Продолжить</a>
+        <a href="./viewcart2.html" class="btn btn-outline-primary">Назад</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+@@include('./_footer.html')

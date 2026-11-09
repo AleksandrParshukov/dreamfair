@@ -1,0 +1,68 @@
+.vc-options {
+  padding-top: 32px;
+  margin-block: 20px 12px;
+  border-top: 1.5px solid rgba(1, 1, 1, 0.1);
+
+  &__caption {
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__checkbox {
+    display: none;
+
+    + label {
+      font-weight: 300;
+      font-size: 14px;
+      padding: 12px 16px;
+      border: 2px solid rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      cursor: pointer;
+
+      > span {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: inherit;
+      }
+
+      &::before {
+        content: url('data:image/svg+xml,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M22%202V22H2V2H22ZM3.66992%2020.3301H20.3301V3.66992H3.66992V20.3301Z%22%20fill%3D%22%23010101%22%20fill-opacity%3D%220.2%22/%3E%3C/svg%3E');
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    &:checked + label::before {
+      content: url('data:image/svg+xml,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%0A%20%20%3Cpath%20d%3D%22M22%2022H2V2H22V22ZM3.66992%2020.3301H20.3301V3.66992H3.66992V20.3301ZM17.2939%206.55371C17.5403%206.16401%2018.0565%206.04774%2018.4463%206.29395C18.836%206.54026%2018.9523%207.05647%2018.7061%207.44629L12.3906%2017.4463C12.2514%2017.6667%2012.0165%2017.8093%2011.7568%2017.832C11.4972%2017.8547%2011.2418%2017.7543%2011.0664%2017.5615L5.38184%2011.3115C5.07191%2010.9703%205.09744%2010.442%205.43848%2010.1318C5.77965%209.82191%206.308%209.84744%206.61816%2010.1885L11.5635%2015.627L17.2939%206.55371Z%22%20fill%3D%22%23010101%22%20fill-opacity%3D%220.2%22%20/%3E%0A%3C/svg%3E');
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__desc {
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  &__price {
+    font-weight: 400;
+    color: $primary-blue;
+    white-space: nowrap;
+  }
+}

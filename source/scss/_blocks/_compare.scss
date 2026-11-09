@@ -1,0 +1,61 @@
+.compare {
+  --col1-width: 200px;
+
+  &__table {
+    text-align: center;
+    min-width: 100%;
+    width: max-content;
+    position: static;
+    border-collapse: collapse;
+    table-layout: fixed;
+
+    tr:not(:last-child) td {
+      border-bottom: 1.5px solid rgba(1, 1, 1, 0.1);
+    }
+
+    tr:not(:last-child) .fixed-col::after {
+      content: '';
+      width: 0;
+      height: 100%;
+      border-right: 1.5px solid rgba(1, 1, 1, 0.1);
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+    }
+
+    td {
+      vertical-align: middle;
+      white-space: nowrap;
+      min-width: max-content;
+      width: auto;
+      padding: 16px;
+      background-color: #eeebe1;
+    }
+
+    .fixed-col {
+      white-space: wrap;
+      text-align: left;
+      width: var(--col1-width) !important;
+      position: sticky;
+      left: 0;
+    }
+  }
+
+  .text-blue {
+    color: $primary-blue;
+  }
+
+  .btn {
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+}
+
+@media (max-width: $sm) {
+  .compare {
+    --col1-width: min-content;
+  }
+}

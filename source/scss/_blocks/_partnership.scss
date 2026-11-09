@@ -1,0 +1,265 @@
+.partnership {
+  background-color: $secondary-white;
+
+  .wrapper {
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__top {
+    background-color: $primary-blue;
+
+    .wrapper {
+      padding: 32px 80px;
+    }
+
+    .h2 {
+      color: $secondary-white;
+    }
+
+    .breadcrumbs {
+      padding-bottom: 40px;
+
+      li,
+      li:last-child {
+        color: $secondary-white;
+      }
+
+      a:hover {
+        color: $white;
+      }
+    }
+  }
+
+  &__title-block {
+    text-align: center;
+    width: 100%;
+    padding: 60px 140px;
+    background-color: $white;
+    border-radius: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    position: relative;
+
+    &::before,
+    &::after {
+      content: '';
+      width: 60px;
+      height: 116px;
+      background-color: $secondary-white;
+      mask-image: url('../img/Icon/pattern.svg');
+      mask-position: center;
+      mask-repeat: no-repeat;
+      mask-size: contain;
+      display: block;
+      position: absolute;
+      top: 5px;
+    }
+    &::before {
+      left: 5px;
+    }
+    &::after {
+      right: 5px;
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 20px;
+  }
+
+  &__text {
+    font-weight: 300;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.7);
+    max-width: 1000px;
+
+    &.big {
+      font-size: 18px;
+      text-align: center;
+    }
+  }
+
+  &__list {
+    --flex-basis: 1%;
+    width: 100%;
+    margin-top: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+
+    + .partnership__title-block {
+      margin-top: 80px;
+    }
+
+    &--catalog .partnership__item > img {
+      width: 100%;
+      height: 80px;
+    }
+
+    &--blue .partnership__item {
+      background-color: $primary-blue;
+
+      .partnership__caption,
+      .partnership__text {
+        color: $white;
+      }
+    }
+  }
+
+  &__item {
+    padding: 32px;
+    background-color: $white;
+    border-radius: 21px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    flex: 1 0 var(--flex-basis);
+
+    > img {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+    }
+
+    ul {
+      list-style: revert;
+      padding: revert;
+      margin: revert;
+    }
+
+    p + ul {
+      margin-top: 1em;
+    }
+  }
+
+  &__caption {
+    font-weight: 500;
+    font-size: 18px;
+    color: $primary-blue;
+  }
+
+  &__link {
+    font-weight: 300;
+    font-size: 18px;
+    color: $primary-blue;
+  }
+}
+
+@media (max-width: $md) {
+  .partnership {
+    .wrapper {
+      padding: 50px;
+    }
+
+    &__top {
+      .wrapper {
+        padding: 32px 50px;
+      }
+    }
+
+    &__title-block {
+      padding: 32px 80px;
+      gap: 24px;
+    }
+
+    &__list {
+      margin-top: 24px;
+      gap: 24px;
+
+      + .partnership__title-block {
+        margin-top: 50px;
+      }
+    }
+
+    &__item {
+      padding: 24px;
+      gap: 24px;
+      flex: 1 0 40%;
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .partnership {
+    .wrapper {
+      padding: 32px 24px;
+    }
+
+    &__top {
+      .wrapper {
+        padding: 32px 24px;
+      }
+
+      .h2 {
+        color: $secondary-white;
+      }
+
+      .breadcrumbs {
+        padding-bottom: 24px;
+      }
+    }
+
+    &__title-block {
+      padding: 32px 24px;
+
+      + .btn {
+        margin-top: 12px;
+      }
+
+      &::before,
+      &::after {
+        width: 40px;
+        height: 77px;
+      }
+    }
+
+    &__title {
+      font-size: 16px;
+    }
+
+    &__text {
+      font-size: 14px;
+
+      &.big {
+        font-size: 16px;
+      }
+    }
+
+    &__list {
+      margin-top: 12px;
+      flex-direction: column;
+      gap: 12px;
+
+      + .partnership__title-block {
+        margin-top: 32px;
+      }
+    }
+
+    &__item {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+
+      > img {
+        width: 32px;
+        height: 32px;
+        flex-shrink: 0;
+      }
+    }
+
+    &__caption {
+      font-size: 16px;
+      flex: 1 0 0;
+    }
+
+    &__link {
+      font-size: 16px;
+    }
+  }
+}

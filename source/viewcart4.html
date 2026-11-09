@@ -1,0 +1,123 @@
+@@include('./_header.html')
+
+<section class="viewcart__top">
+  <div class="wrapper">
+    <ol class="breadcrumbs">
+      <li><a href="/">Главная</a></li>
+      <li><a href="./viewcart.html">Корзина</a></li>
+      <li><a href="./viewcart2.html">Дополнительные опции</a></li>
+      <li><a href="./viewcart3.html">Доставка</a></li>
+      <li>
+        <p>Оплата</p>
+      </li>
+    </ol>
+    <h1>
+      <a class="h2" href="./viewcart3.html">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M23.9867 27.1698C24.1981 26.9584 24.3169 26.6716 24.3169 26.3725C24.3169 26.0735 24.1981 25.7867 23.9867 25.5753L18.4046 19.9932L23.9867 14.4111C24.1921 14.1984 24.3058 13.9136 24.3032 13.6179C24.3006 13.3222 24.1821 13.0394 23.973 12.8303C23.7639 12.6212 23.481 12.5026 23.1854 12.5C22.8897 12.4975 22.6048 12.6111 22.3921 12.8166L16.0128 19.1959C15.8014 19.4074 15.6826 19.6942 15.6826 19.9932C15.6826 20.2922 15.8014 20.579 16.0128 20.7905L22.3921 27.1698C22.6036 27.3812 22.8904 27.5 23.1894 27.5C23.4884 27.5 23.7752 27.3812 23.9867 27.1698Z" fill="currentColor" />
+        </svg>
+        <span>Оплата</span>
+      </a>
+    </h1>
+  </div>
+</section>
+
+<section class="viewcart">
+  <div class="wrapper">
+    <div class="viewcart__list vc-form">
+      <div class="vc-form__block">
+        <p class="vc-form__caption">Способ оплаты</p>
+        <div class="vc-form__row payment">
+          <input type="radio" class="payment__radio" name="payment_method" id="payment_method_card" checked>
+          <label for="payment_method_card">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="40" height="40" rx="8" fill="#F39200" />
+              <path d="M27.2727 12C28.779 12 30 13.2592 30 14.8125V24.1875C30 25.7408 28.779 27 27.2727 27H12.7273C11.221 27 10 25.7408 10 24.1875V14.8125C10 13.2592 11.221 12 12.7273 12H27.2727ZM11.8182 18.5625V24.1875C11.8182 24.7053 12.2252 25.125 12.7273 25.125H27.2727C27.7748 25.125 28.1818 24.7053 28.1818 24.1875V18.5625H11.8182ZM12.7273 13.875C12.2252 13.875 11.8182 14.2947 11.8182 14.8125V16.6875H28.1818V14.8125C28.1818 14.2947 27.7748 13.875 27.2727 13.875H12.7273Z" fill="white" />
+            </svg>
+            <span>
+              <span class="payment__caption">Банковская карта</span>
+              <span class="payment__desc">Visa, MasterCard, МИР</span>
+            </span>
+          </label>
+          <input type="radio" class="payment__radio" name="payment_method" id="payment_method_split">
+          <label for="payment_method_split">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="40" height="40" rx="8" fill="#F39200" />
+              <path d="M27.2727 12C28.779 12 30 13.2592 30 14.8125V24.1875C30 25.7408 28.779 27 27.2727 27H12.7273C11.221 27 10 25.7408 10 24.1875V14.8125C10 13.2592 11.221 12 12.7273 12H27.2727ZM11.8182 18.5625V24.1875C11.8182 24.7053 12.2252 25.125 12.7273 25.125H27.2727C27.7748 25.125 28.1818 24.7053 28.1818 24.1875V18.5625H11.8182ZM12.7273 13.875C12.2252 13.875 11.8182 14.2947 11.8182 14.8125V16.6875H28.1818V14.8125C28.1818 14.2947 27.7748 13.875 27.2727 13.875H12.7273Z" fill="white" />
+            </svg>
+            <span>
+              <span class="payment__caption">Рассрочка</span>
+              <span class="payment__desc">Оплата частями от 3 до 12 месяцев</span>
+            </span>
+          </label>
+        </div>
+      </div>
+      <div class="vc-form__block">
+        <p class="vc-form__caption">Данные карты</p>
+        <div class="vc-form__group">
+          <label for="card_number">Номер карты *</label>
+          <input type="text" name="card_number" id="card_number" placeholder="1234 5678 9012 3456">
+        </div>
+        <div class="vc-form__group">
+          <label for="name_on_card">Имя владельца *</label>
+          <input type="text" name="name_on_card" id="name_on_card" placeholder="IVAN IVANOV">
+        </div>
+        <div class="vc-form__row">
+          <div class="vc-form__group">
+            <label for="expiration_date">Срок действия *</label>
+            <input type="text" name="expiration_date" id="expiration_date" placeholder="MM/YY">
+          </div>
+          <div class="vc-form__group">
+            <label for="cvv">CVV *</label>
+            <input type="password" name="cvv" id="cvv" placeholder="123">
+          </div>
+        </div>
+        <div class="payment__note">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18.2222 12.9C18.2222 12.6613 18.1285 12.4325 17.9618 12.2637C17.7951 12.0949 17.5691 12 17.3333 12H6.66667C6.43092 12 6.20489 12.0949 6.03819 12.2637C5.8715 12.4325 5.77778 12.6613 5.77778 12.9V18.3L5.78212 18.3888C5.80229 18.5949 5.89229 18.7886 6.03819 18.9363C6.20489 19.1051 6.43092 19.2 6.66667 19.2H17.3333C17.5691 19.2 17.7951 19.1051 17.9618 18.9363C18.1285 18.7675 18.2222 18.5387 18.2222 18.3V12.9ZM11.1111 16.5V14.7C11.1111 14.2029 11.5091 13.8 12 13.8C12.4909 13.8 12.8889 14.2029 12.8889 14.7V16.5C12.8889 16.9971 12.4909 17.4 12 17.4C11.5091 17.4 11.1111 16.9971 11.1111 16.5ZM14.6667 7.5C14.6667 6.78392 14.3855 6.09736 13.8854 5.59102C13.3853 5.08467 12.7072 4.8 12 4.8C11.2928 4.8 10.6147 5.08467 10.1146 5.59102C9.61449 6.09736 9.33333 6.78392 9.33333 7.5V10.2H14.6667V7.5ZM16.4444 10.2H17.3333C18.0406 10.2 18.7187 10.4847 19.2188 10.991C19.7188 11.4974 20 12.1839 20 12.9V18.3C20 19.0161 19.7188 19.7026 19.2188 20.209C18.7187 20.7153 18.0406 21 17.3333 21H6.66667C5.95942 21 5.28135 20.7153 4.78125 20.209C4.28115 19.7026 4 19.0161 4 18.3V12.9C4 12.1839 4.28115 11.4974 4.78125 10.991C5.28135 10.4847 5.95942 10.2 6.66667 10.2H7.55556V7.5C7.55556 6.30653 8.02414 5.16227 8.85764 4.31836C9.69113 3.47445 10.8213 3 12 3C13.1787 3 14.3089 3.47445 15.1424 4.31836C15.9759 5.16227 16.4444 6.30653 16.4444 7.5V10.2Z" fill="#305570" />
+          </svg>
+          <p>Ваши данные защищены и передаются по безопасному соединению</p>
+        </div>
+      </div>
+    </div>
+    <div class="viewcart__summary">
+      <p class="viewcart__caption">Ваш заказ</p>
+      <ul class="viewcart__sum-products">
+        <li>
+          <img src="./img/idx_product.webp" width="64" height="64" alt="">
+          <div>
+            <p>Каркасный дом с купелью</p>
+            <p class="viewcart__text">1 шт.</p>
+          </div>
+        </li>
+        <li>
+          <img src="./img/idx_product.webp" width="64" height="64" alt="">
+          <div>
+            <p>Каркасный дом с купелью</p>
+            <p class="viewcart__text">1 шт.</p>
+          </div>
+        </li>
+      </ul>
+      <ul class="viewcart__sum-list">
+        <li>
+          <p class="viewcart__text">Товары (2)</p>
+          <p class="viewcart__price">2 750 000 руб.</p>
+        </li>
+        <li>
+          <p class="viewcart__text">Доставка</p>
+          <p class="viewcart__price viewcart__price--free">Бесплатно</p>
+        </li>
+        <li class="viewcart__total">
+          <p class="viewcart__caption">Итого</p>
+          <p class="viewcart__price">2 750 000 руб.</p>
+        </li>
+      </ul>
+      <div>
+        <a href="#" class="btn btn-primary">Оплатить</a>
+        <a href="./viewcart3.html" class="btn btn-outline-primary">Назад</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+@@include('./_footer.html')

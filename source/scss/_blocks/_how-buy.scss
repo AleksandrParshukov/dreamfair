@@ -1,0 +1,108 @@
+.how-buy {
+  background-color: $primary-bg;
+
+  .wrapper {
+    padding: 80px 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+  }
+
+  &__list {
+    margin-inline: auto;
+    display: flex;
+    gap: 60px;
+  }
+
+  &__item {
+    max-width: 500px;
+    padding: 32px;
+    background-color: $secondary-white;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+
+    &:nth-child(1) .how-buy__num {
+      background-color: $primary-blue;
+    }
+
+    &:nth-child(2) .how-buy__num {
+      background-color: #e7ba20;
+    }
+
+    &:nth-child(3) .how-buy__num {
+      background-color: #b11212;
+    }
+  }
+
+  &__num {
+    font-weight: 500;
+    font-size: 36px;
+    color: $primary-bg;
+    width: 45px;
+    height: 45px;
+    border-radius: 100vw;
+    display: grid;
+    place-content: center;
+  }
+
+  &__caption {
+    text-align: center;
+    font-weight: 400;
+    font-size: 20px;
+  }
+
+  &__text {
+    font-weight: 300;
+    font-size: 14px;
+    color: rgba(1, 1, 1, 0.7);
+  }
+}
+
+@media (max-width: $lg) {
+  .how-buy {
+    .wrapper {
+      padding-inline: 50px;
+    }
+
+    &__list {
+      gap: 32px;
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .how-buy {
+    .wrapper {
+      padding: 32px 24px;
+      gap: 32px;
+    }
+
+    &__list {
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    &__item {
+      padding: 24px;
+      gap: 12px;
+    }
+
+    &__num {
+      font-size: 24px;
+      width: 36px;
+      height: 36px;
+    }
+
+    &__caption {
+      font-size: 16px;
+    }
+
+    &__text {
+      font-size: 12px;
+    }
+  }
+}

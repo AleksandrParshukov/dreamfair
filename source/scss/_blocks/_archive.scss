@@ -1,0 +1,153 @@
+.archive {
+  background-color: $secondary-white;
+
+  .wrapper {
+    padding: 32px 80px 80px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__search {
+    width: 100%;
+    max-width: 400px;
+    margin-block: 32px;
+    position: relative;
+  }
+
+  &__input {
+    font-weight: 300;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    padding-block: 9px;
+    padding-inline: 44px 14px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 8px;
+
+    &:focus {
+      outline: 2px solid #{'rgb(from #305570 r g b / 0.5)'};
+    }
+  }
+
+  &__submit {
+    color: rgba(1, 1, 1, 0.2);
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    left: 14px;
+    transform: translateY(-50%);
+
+    &:hover {
+      color: $primary-blue;
+    }
+  }
+
+  &__item {
+    padding-block: 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    display: flex;
+    align-items: center;
+    gap: 32px;
+
+    &:hover {
+      border-color: #{'rgb(from #305570 r g b / 0.5)'};
+    }
+  }
+
+  &__name {
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #010101;
+  }
+
+  &__desc,
+  &__date {
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+  &__date {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: $sm) {
+  .archive {
+    .wrapper {
+      padding: 32px 24px;
+    }
+
+    &__search {
+      width: 100%;
+      max-width: 400px;
+      margin-block: 32px;
+      position: relative;
+    }
+
+    &__input {
+      font-weight: 300;
+      font-size: 14px;
+      color: rgba(0, 0, 0, 0.5);
+      width: 100%;
+      padding-block: 9px;
+      padding-inline: 44px 14px;
+      background-color: #ffffff;
+      border: none;
+      border-radius: 8px;
+
+      &:focus {
+        outline: 2px solid #{'rgb(from #305570 r g b / 0.5)'};
+      }
+    }
+
+    &__submit {
+      color: rgba(1, 1, 1, 0.2);
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: 50%;
+      left: 14px;
+      transform: translateY(-50%);
+
+      &:hover {
+        color: $primary-blue;
+      }
+    }
+
+    &__item {
+      padding-block: 16px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+      display: flex;
+      align-items: center;
+      gap: 32px;
+
+      &:hover {
+        border-color: #{'rgb(from #305570 r g b / 0.5)'};
+      }
+    }
+
+    &__name {
+      font-weight: 300;
+      font-size: 15px;
+      line-height: 1.5;
+      color: #010101;
+    }
+
+    &__desc,
+    &__date {
+      font-weight: 300;
+      font-size: 13px;
+      line-height: 1.5;
+      color: rgba(0, 0, 0, 0.4);
+    }
+
+    &__date {
+      margin-left: auto;
+    }
+  }
+}

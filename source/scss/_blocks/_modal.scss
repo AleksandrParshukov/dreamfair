@@ -1,0 +1,136 @@
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1050;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: opacity 0.3s ease;
+  opacity: 0;
+
+  &.show {
+    display: block;
+    opacity: 1;
+  }
+
+  &__dialog {
+    position: relative;
+    margin: auto;
+    max-width: 680px;
+    max-height: 80vh;
+    position: fixed;
+    inset: 0;
+  }
+
+  &__content {
+    height: max-content;
+    padding: 32px;
+    background-color: $secondary-white;
+    border: 1.32px solid rgba(48, 85, 112, 0.1);
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__header {
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 24px;
+  }
+
+  &__close {
+    width: 32px;
+    height: 32px;
+    border-radius: 32px;
+    display: grid;
+    place-content: center;
+    transition: all 0.25s ease;
+
+    &:hover {
+      background-color: $primary-bg;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &.success {
+    .modal__header {
+      margin: 0;
+      justify-content: end;
+    }
+
+    .modal__body {
+      font-weight: 500;
+      font-size: 24px;
+      text-align: center;
+      height: 400px;
+      display: grid;
+      place-content: center;
+    }
+
+    .pattern-white::before {
+      width: 100px;
+      height: 193px;
+      background-color: $white;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .modal {
+    &__dialog {
+      max-width: 95vw;
+    }
+
+    &__content {
+      padding: 24px;
+    }
+
+    &__header {
+      margin-bottom: 32px;
+    }
+
+    &__title {
+      font-size: 18px;
+    }
+
+    &__close {
+      width: 28px;
+      height: 28px;
+    }
+
+    &.success {
+      .modal__header {
+        margin: 0;
+        justify-content: end;
+      }
+
+      .modal__body {
+        font-size: 18px;
+        height: 320px;
+      }
+
+      .pattern-white::before {
+        width: 73px;
+        height: 171px;
+      }
+    }
+  }
+}

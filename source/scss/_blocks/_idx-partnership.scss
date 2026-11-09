@@ -1,0 +1,152 @@
+.idx-partnership {
+  background-color: $primary-bg;
+  overflow: hidden;
+
+  .wrapper {
+    padding: 80px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &::before,
+    &::after {
+      content: '';
+      width: 109px;
+      height: 212px;
+      background-color: $secondary-white;
+      mask-image: url('../img/Icon/pattern.svg');
+      mask-position: center;
+      mask-repeat: no-repeat;
+      mask-size: contain;
+      display: block;
+      position: absolute;
+      top: 5px;
+      z-index: 0;
+    }
+    &::before {
+      left: 5px;
+    }
+    &::after {
+      right: 5px;
+    }
+
+    > * {
+      z-index: 1;
+    }
+  }
+
+  .h2 {
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    font-weight: 300;
+    font-size: 18px;
+  }
+
+  &__list {
+    width: 100%;
+    margin-top: 80px;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  &__item {
+    color: rgba(1, 1, 1, 0.7);
+    min-width: 500px;
+    height: auto;
+    padding: 24px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 16px;
+    display: flex;
+    gap: 16px;
+    flex: 1 1 40%;
+  }
+
+  &__caption {
+    font-weight: 300;
+    font-size: 20px;
+    color: $black;
+    margin-bottom: 8px;
+  }
+
+  &__stats {
+    width: 100%;
+    padding: 32px;
+    margin-block: 40px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 16px;
+    display: flex;
+    flex-wrap: wrap;
+
+    > li {
+      min-width: 200px;
+      flex: 1 0 30%;
+    }
+  }
+
+  &__num {
+    font-weight: 300;
+    font-size: 48px;
+    color: $primary-blue;
+  }
+}
+
+@media (max-width: $sm) {
+  .idx-partnership {
+    .wrapper {
+      padding: 32px 24px;
+
+      &::before,
+      &::after {
+        width: 46px;
+        height: 102px;
+      }
+    }
+
+    .h2 {
+      margin-bottom: 12px;
+    }
+
+    &__text {
+      font-size: 14px;
+    }
+
+    &__list {
+      margin-top: 32px;
+      gap: 12px;
+      flex-direction: column;
+    }
+
+    &__item {
+      min-width: 0;
+      width: 100%;
+      padding: 16px;
+    }
+
+    &__caption {
+      font-size: 16px;
+    }
+
+    &__stats {
+      padding: 12px;
+      margin-block: 24px;
+      gap: 12px 0;
+
+      > li {
+        min-width: 120px;
+      }
+
+      > li:nth-child(2) {
+        order: -1;
+      }
+    }
+
+    &__num {
+      font-size: 24px;
+    }
+  }
+}

@@ -1,0 +1,175 @@
+.login {
+  width: 100%;
+  padding: 0;
+  background-color: transparent;
+  border: none !important;
+
+  &__type {
+    padding: 0 !important;
+    margin-bottom: 32px !important;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    gap: 12px;
+
+    &::before,
+    &::after {
+      content: none;
+    }
+
+    > li {
+      margin: 0 !important;
+      flex: 1 0 40%;
+      background: transparent !important;
+      border: none !important;
+    }
+
+    a {
+      font-family: 'Geologica', sans-serif;
+      font-weight: 300;
+      font-size: 18px;
+      color: $black;
+      text-align: center;
+      width: 100%;
+      padding: 8px !important;
+      background-color: $white;
+      border: 1.5px solid rgba(48, 85, 112, 0.3);
+      border-radius: 32px;
+      display: block;
+    }
+
+    .ui-state-active a {
+      color: $white;
+      background-color: $primary-blue;
+      border: 1.5px solid rgba(48, 85, 112, 0);
+    }
+  }
+
+  &__tab {
+    padding: 0 !important;
+    background-color: transparent;
+    border: none !important;
+  }
+
+  &__action {
+    padding: 0 !important;
+    margin-bottom: 24px !important;
+    background-color: rgba(234, 230, 218, 0.6);
+    border-radius: 32px;
+    border: none;
+    display: flex;
+
+    &::before,
+    &::after {
+      content: none;
+    }
+
+    > li {
+      margin: 0 !important;
+      flex: 1 0 40%;
+      background: transparent !important;
+      border: none !important;
+    }
+
+    a {
+      font-family: 'Geologica', sans-serif;
+      font-weight: 300;
+      font-size: 18px;
+      color: $black;
+      text-align: center;
+      width: 100%;
+      padding: 8px !important;
+      background-color: transparent;
+      border: none !important;
+      border-radius: 32px;
+      display: block;
+    }
+
+    .ui-state-active a {
+      color: $white;
+      background-color: $primary-blue;
+    }
+  }
+
+  &__form {
+    font-family: 'Geologica', sans-serif !important;
+
+    .btn {
+      width: 100%;
+      margin-top: 32px;
+    }
+  }
+
+  &__scroll {
+    max-height: 40vh;
+    overflow: auto;
+    scrollbar-width: thin;
+  }
+
+  &__form-group {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    label {
+      font-weight: 400;
+      font-size: 18px;
+      color: $black;
+    }
+
+    input {
+      font: inherit;
+      font-weight: 300;
+      font-size: 16px;
+      color: rgba(48, 85, 112, 1);
+      padding: 12px 20px;
+      background-color: $white;
+      border: 1.5px solid rgba(48, 85, 112, 0.3);
+      border-radius: 32px;
+    }
+  }
+
+  &__note {
+    font-weight: 300;
+    font-size: 16px;
+    color: rgba(48, 85, 112, 0.6);
+  }
+}
+
+@media (max-width: $sm) {
+  .login {
+    &__type {
+      margin-bottom: 24px !important;
+
+      a {
+        font-size: 14px;
+      }
+    }
+
+    &__action {
+      a {
+        font-size: 14px;
+      }
+    }
+
+    &__form {
+      .btn {
+        margin-top: 24px;
+      }
+    }
+
+    &__form-group {
+      margin-bottom: 12px;
+      gap: 8px;
+
+      label {
+        font-size: 16px;
+      }
+
+      input {
+        font-size: 14px;
+      }
+    }
+  }
+}

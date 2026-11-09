@@ -1,0 +1,59 @@
+.idx-upsales {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+
+  &__item {
+    min-width: 325px;
+    padding: 4px 16px 4px 0px;
+    background-color: $primary-bg;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    > img {
+      width: 130px;
+      height: 146px;
+      object-fit: contain;
+    }
+
+    &:hover .btn-arrow {
+      color: $primary-bg;
+      background-color: $primary-blue;
+    }
+  }
+
+  &__name {
+    font-weight: 300;
+    font-size: 14px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* максимум 2 строки */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .btn-arrow {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: $lg) {
+  .idx-upsales {
+    &__item {
+      min-width: 275px;
+
+      > img {
+        width: 96px;
+        height: 100px;
+      }
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .idx-upsales {
+    grid-template-columns: 100%;
+  }
+}

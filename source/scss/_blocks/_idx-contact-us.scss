@@ -1,0 +1,36 @@
+.idx-contact-us {
+  &.contact-us {
+    border-radius: 0;
+    background-repeat: repeat;
+  }
+
+  .wrapper {
+    padding-inline: 140px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .contact-us__title {
+    max-width: 208px;
+  }
+}
+
+@media (max-width: $md) {
+  .idx-contact-us {
+    .wrapper {
+      padding-inline: 24px;
+      flex-direction: column;
+    }
+
+    .contact-us__title {
+      max-width: none;
+    }
+
+    .contact-us__text {
+      text-align: center;
+    }
+  }
+}

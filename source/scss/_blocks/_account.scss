@@ -1,0 +1,192 @@
+.account {
+  background-color: rgba(234, 230, 218, 0.8);
+  height: 100%;
+
+  .wrapper {
+    font-family: 'Geologica', sans-serif !important;
+    padding: 80px;
+    background-color: transparent !important;
+    border: none !important;
+  }
+
+  &__top {
+    background-color: rgba(234, 230, 218, 0.8);
+
+    .wrapper {
+      padding-top: 32px;
+      padding-inline: 80px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 40px;
+    }
+  }
+
+  &__title {
+    font-weight: 300;
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  &__type {
+    font-weight: 300;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &__logout {
+    padding: 8px 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__controls {
+    width: 100%;
+    padding: 0 !important;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+
+    &::before,
+    &::after {
+      content: none;
+    }
+  }
+
+  .ui-tabs-tab {
+    all: revert !important;
+    flex: 1 0 15% !important ;
+  }
+
+  .ui-tabs-tab .account__control {
+    font-weight: 300;
+    font-size: 16px;
+    color: $black;
+    text-align: center;
+    width: 100%;
+    padding: 12px 24px;
+    background-color: transparent;
+    border: 1px solid rgba(1, 1, 1, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    &:hover {
+      color: $white;
+      background-color: $primary-blue;
+      border: 1px solid #305570;
+    }
+  }
+
+  .ui-state-active .account__control {
+    color: $white;
+    background-color: $primary-blue;
+    border: 1px solid #305570;
+    cursor: default !important;
+  }
+
+  &__tab {
+    padding: 0 !important;
+    margin-top: 80px;
+  }
+
+  &__forms {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+
+  &__form {
+    flex: 1 0 40%;
+
+    &.big {
+      flex-basis: 100%;
+    }
+  }
+
+  &__tab-title {
+    font-weight: 400;
+    font-size: 18px;
+    margin-bottom: 32px;
+  }
+
+  .btn {
+    color: var(--color) !important;
+  }
+}
+
+@media (max-width: $md) {
+  .account {
+    .wrapper {
+      padding: 50px;
+    }
+
+    &__top {
+      .wrapper {
+        padding-inline: 50px;
+      }
+    }
+
+    .ui-tabs-tab {
+      flex: 1 0 25% !important ;
+    }
+
+    &__tab {
+      margin-top: 50px;
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .account {
+    .wrapper {
+      padding: 32px 24px;
+    }
+
+    &__top {
+      .wrapper {
+        padding-inline: 24px;
+        gap: 0;
+      }
+    }
+
+    &__greet {
+      margin-block: 24px 12px;
+    }
+
+    &__title {
+      font-size: 16px;
+    }
+
+    &__type {
+      font-size: 14px;
+    }
+
+    .ui-tabs-tab {
+      flex: 0 0 auto !important;
+    }
+
+    .ui-tabs-tab .account__control {
+      padding: 8px 24px;
+    }
+
+    &__tab {
+      margin-top: 32px;
+    }
+
+    &__forms {
+      gap: 12px;
+    }
+
+    &__tab-title {
+      font-size: 16px;
+    }
+  }
+}

@@ -1,0 +1,79 @@
+.slider {
+  margin: 0 !important;
+
+  &__prev,
+  &__next {
+    color: $primary-bg;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border-radius: 100vw;
+    display: grid;
+    place-content: center;
+    background-color: rgba(48, 85, 112, 0.2);
+    cursor: pointer;
+
+    &:hover {
+      color: $white;
+      background-color: rgba(48, 85, 112, 0.5);
+    }
+  }
+
+  &__dots {
+    --dot-color: rgba(48, 85, 112, 0.3);
+    --dot-active-color: rgba(48, 85, 112, 0.7);
+
+    .slick-dots {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 32px;
+      position: static;
+
+      li {
+        all: revert;
+      }
+
+      button {
+        width: 8px;
+        height: 8px;
+        padding: 0;
+        background-color: var(--dot-color);
+        border-radius: 100vw;
+        transition: all 0.25s ease;
+
+        &:hover {
+          background-color: var(--dot-active-color);
+        }
+      }
+
+      .slick-active button {
+        width: 12px;
+        height: 12px;
+        background-color: var(--dot-active-color);
+      }
+
+      button::before {
+        content: none;
+      }
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .slider {
+    margin: 0 !important;
+
+    &__prev,
+    &__next {
+      width: 32px;
+      height: 32px;
+    }
+
+    &__dots {
+      .slick-dots {
+        gap: 12px;
+      }
+    }
+  }
+}

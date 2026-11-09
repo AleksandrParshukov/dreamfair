@@ -1,0 +1,239 @@
+.contacts {
+  &__info {
+    width: 216px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__list {
+    font-size: 16px;
+    line-height: 1.35;
+    color: $primary-black;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__caption {
+    color: $text-gray;
+  }
+
+  &__btn {
+    margin-top: auto;
+  }
+
+  &__map {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+
+    [class*='ground-pane'] {
+      filter: grayscale(1);
+      -ms-filter: grayscale(1);
+      -webkit-filter: grayscale(1);
+      -moz-filter: grayscale(1);
+      -o-filter: grayscale(1);
+    }
+  }
+}
+
+.contacts--city {
+  .idx-block {
+    padding-block: 40px;
+  }
+
+  .contacts__info {
+    font-size: 16px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 217px);
+    grid-template-areas: 'caption mail phone address';
+    align-items: start;
+    gap: 20px;
+  }
+
+  .contacts__caption {
+    text-align: right;
+    grid-area: caption;
+  }
+
+  .contacts__mail {
+    grid-area: mail;
+  }
+
+  .contacts__phone {
+    font-size: 20px;
+    line-height: 1;
+    grid-area: phone;
+  }
+
+  .contacts__address {
+    color: $primary-black;
+    grid-area: address;
+  }
+}
+
+.contacts--onmap {
+  .idx-block {
+    padding-block: 40px;
+    grid-template-columns: var(--first-col-width) max-content 1fr;
+  }
+
+  .contacts__info {
+    margin-right: 20px;
+  }
+
+  .contacts__map {
+    height: 400px;
+  }
+}
+
+@media (max-width: $md) {
+  .contacts {
+    &__info {
+      width: 100%;
+    }
+
+    &__list {
+      font-size: 12px;
+      margin-bottom: 48px;
+      display: grid;
+      grid-template-columns: repeat(2, max-content);
+      grid-template-rows: repeat(2, min-content);
+      grid-auto-flow: column;
+    }
+
+    &__map {
+      height: 320px;
+      margin-top: 50px;
+      grid-column: span 2;
+    }
+  }
+
+  .contacts--city {
+    .idx-block {
+      padding-block: 70px 50px;
+    }
+
+    .contacts__info {
+      font-size: 12px;
+      line-height: 1.66667;
+      grid-template-columns: repeat(2, 217px);
+      grid-template-rows: repeat(3, min-content);
+      grid-template-areas:
+        'phone address'
+        '. caption'
+        '. mail';
+      gap: 0 20px;
+    }
+
+    .contacts__caption {
+      text-align: left;
+      margin-top: 40px;
+    }
+
+    .contacts__mail {
+      grid-area: mail;
+    }
+
+    .contacts__phone {
+      justify-content: end;
+    }
+
+    .contacts__address {
+      color: $primary-black;
+      grid-area: address;
+    }
+  }
+
+  .contacts--onmap {
+    .idx-block {
+      padding-block: 57px 70px;
+      grid-template-columns: var(--first-col-width) 1fr;
+    }
+
+    .contacts__info {
+      font-size: 12px;
+      line-height: 1.66667;
+      margin-right: 0;
+      display: grid;
+      grid-template-columns: repeat(2, 217px);
+      grid-template-rows: repeat(2, min-content);
+      gap: 0 20px;
+    }
+
+    .contacts__list {
+      grid-column-start: 2;
+    }
+
+    .contacts__btn {
+      line-height: 1.25;
+      grid-column-start: 2;
+    }
+
+    .contacts__map {
+      height: 320px;
+      grid-column: 1 / span 2;
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .contacts {
+    &__list {
+      margin-bottom: 24px;
+    }
+  }
+
+  .contacts--city {
+    .idx-block {
+      padding-block: 45px 40px;
+    }
+
+    .contacts__info {
+      grid-template-columns: repeat(2, 136px);
+      grid-template-rows: repeat(2, min-content);
+      grid-template-areas:
+        'phone address'
+        'caption mail';
+      gap: 4px 16px;
+    }
+
+    .contacts__caption {
+      text-align: right;
+      margin-top: auto;
+    }
+
+    .contacts__mail {
+      grid-area: mail;
+    }
+
+    .contacts__phone {
+      font-size: 16px;
+      justify-content: end;
+    }
+
+    .contacts__address {
+      color: $primary-black;
+      grid-area: address;
+    }
+  }
+
+  .contacts--onmap {
+    .idx-block {
+      padding-block: 57px 70px;
+      grid-template-columns: var(--first-col-width) 1fr;
+    }
+
+    .contacts__info {
+      display: block;
+    }
+
+    .contacts__list {
+      display: grid;
+      grid-template-columns: repeat(2, 136px);
+      grid-auto-flow: row;
+    }
+  }
+}

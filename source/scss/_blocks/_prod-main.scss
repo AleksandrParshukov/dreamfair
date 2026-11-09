@@ -1,0 +1,425 @@
+.prod-main {
+  background-color: rgba(234, 230, 218, 0.6);
+
+  .wrapper {
+    max-width: 1500px;
+    padding: 80px 32px;
+    display: grid;
+    grid-template-columns: max-content 1fr max-content;
+    grid-template-rows: repeat(2, min-content);
+    grid-template-areas: 'img top options' 'img content options';
+    gap: 32px 40px;
+  }
+
+  &__breadcrumbs {
+    background-color: rgba(234, 230, 218, 0.6);
+
+    .wrapper {
+      max-width: 1500px;
+      padding-top: 32px;
+      padding-inline: 32px;
+    }
+  }
+
+  &__gallery {
+    width: 500px;
+    grid-area: img;
+  }
+
+  &__big-image {
+    padding: 70px;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 24px;
+  }
+
+  &__big-slider {
+    .item {
+      min-width: 0;
+
+      img {
+        width: 360px;
+        height: 360px;
+        object-fit: contain;
+      }
+    }
+  }
+
+  &__prev,
+  &__next {
+    color: rgba(48, 85, 112, 0.3);
+    width: 36px;
+    height: 36px;
+    background-color: rgba(234, 230, 218, 0.8);
+    border: 1px solid #fff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__prev {
+    left: 12px;
+  }
+
+  &__next {
+    right: 12px;
+  }
+
+  .slider__dots {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    .slick-dots {
+      gap: 12px;
+    }
+  }
+
+  &__nav-gallery {
+    margin-top: 12px;
+
+    .item {
+      min-width: 0;
+      width: 100px;
+      height: 100px;
+      padding: 10px;
+      margin-inline: 6px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 12px;
+      cursor: pointer;
+
+      > img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        opacity: 0.5;
+        transition: opacity 0.2s ease;
+      }
+
+      &.slick-current > img {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__top {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    grid-area: top;
+  }
+
+  &__badge {
+    font-weight: 500;
+    font-size: 14px;
+    width: max-content;
+    padding: 4px 8px;
+    border-radius: 8px;
+  }
+
+  &__control {
+    color: rgba(48, 85, 112, 0.8);
+    width: 36px;
+    height: 36px;
+    margin-left: 12px;
+    background-color: $white;
+    border: 1px solid rgba(48, 85, 112, 0.3);
+    border-radius: 100vw;
+    display: grid;
+    place-content: center;
+    transition: all 0.25s ease;
+
+    &:first-of-type {
+      margin-left: auto;
+    }
+
+    &:hover,
+    &:active {
+      color: $white;
+      background-color: rgba(48, 85, 112, 0.8);
+      border-color: rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &__content {
+    grid-area: content;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  &__short-desc {
+    font-weight: 300;
+    font-size: 16px;
+
+    ul {
+      list-style: revert;
+      padding: revert;
+      margin: revert;
+    }
+  }
+
+  &__props {
+    padding-block: 32px;
+    border-top: 1.5px solid rgba(1, 1, 1, 0.1);
+    border-bottom: 1.5px solid rgba(1, 1, 1, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    dl {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px 0;
+    }
+
+    dt {
+      font-weight: 300;
+      font-size: 16px;
+      color: rgba(1, 1, 1, 0.6);
+      margin-bottom: 4px;
+    }
+
+    dd {
+      font-weight: 400;
+      font-size: 15px;
+      margin: 0;
+    }
+  }
+
+  &__caption {
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  &__add2cart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .btn {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+  }
+
+  &__price {
+    font-weight: 400;
+    font-size: 16px;
+
+    span {
+      font-weight: 300;
+    }
+  }
+
+  &__conditions {
+    font-weight: 300;
+    font-size: 16px;
+    padding: 24px;
+    background-color: rgba(234, 230, 218, 0.4);
+    border-radius: 24px;
+  }
+
+  &__card {
+    padding-bottom: 12px;
+    margin-block: 16px 12px;
+    border-bottom: 1.5px solid rgba(1, 1, 1, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  &__note {
+    font-weight: 300;
+    font-size: 16px;
+    color: rgba(1, 1, 1, 0.6);
+    margin-top: 8px;
+  }
+
+  &__options {
+    width: 100%;
+    max-width: 320px;
+    height: min-content;
+    padding: 32px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 24px;
+    grid-area: options;
+
+    > ul {
+      margin-top: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+
+  &__checkbox {
+    display: none;
+
+    + label {
+      font-weight: 300;
+      font-size: 16px;
+      display: flex;
+      gap: 8px;
+      cursor: pointer;
+
+      &::before {
+        content: url('data:image/svg+xml,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M22%202V22H2V2H22ZM3.66992%2020.3301H20.3301V3.66992H3.66992V20.3301Z%22%20fill%3D%22%23010101%22%20fill-opacity%3D%220.2%22/%3E%3C/svg%3E');
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    &:checked + label::before {
+      content: url('data:image/svg+xml,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%0A%20%20%3Cpath%20d%3D%22M22%2022H2V2H22V22ZM3.66992%2020.3301H20.3301V3.66992H3.66992V20.3301ZM17.2939%206.55371C17.5403%206.16401%2018.0565%206.04774%2018.4463%206.29395C18.836%206.54026%2018.9523%207.05647%2018.7061%207.44629L12.3906%2017.4463C12.2514%2017.6667%2012.0165%2017.8093%2011.7568%2017.832C11.4972%2017.8547%2011.2418%2017.7543%2011.0664%2017.5615L5.38184%2011.3115C5.07191%2010.9703%205.09744%2010.442%205.43848%2010.1318C5.77965%209.82191%206.308%209.84744%206.61816%2010.1885L11.5635%2015.627L17.2939%206.55371Z%22%20fill%3D%22%23010101%22%20fill-opacity%3D%220.2%22%20/%3E%0A%3C/svg%3E');
+    }
+  }
+
+  &__option-price {
+    font-weight: 300;
+    font-size: 14px;
+    color: rgba(1, 1, 1, 0.6);
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: $lg) {
+  .prod-main {
+    .wrapper {
+      padding: 80px 32px;
+      background-color: rgba(234, 230, 218, 0.6);
+      display: grid;
+      grid-template-columns: max-content 1fr;
+      grid-template-rows: repeat(4, min-content);
+      grid-template-areas: 'img top' 'img content' 'options content';
+      gap: 32px 40px;
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .prod-main {
+    .wrapper {
+      padding: 32px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    &__breadcrumbs {
+      padding-inline: 24px;
+    }
+
+    &__gallery {
+      width: 100%;
+    }
+
+    &__big-image {
+      padding: 25px 47px;
+    }
+
+    &__big-slider {
+      .item {
+        > img {
+          width: 100%;
+          max-width: 360px;
+          height: auto;
+          max-height: 360px;
+          margin-inline: auto;
+          object-position: center;
+        }
+      }
+    }
+
+    &__prev,
+    &__next {
+      width: 32px;
+      height: 32px;
+    }
+
+    &__nav-gallery {
+      .item {
+        width: auto;
+        height: auto;
+        aspect-ratio: 1;
+        padding: 8px;
+        margin-inline: 4px;
+      }
+    }
+
+    &__control {
+      width: 32px;
+      height: 32px;
+
+      > svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    &__content {
+      gap: 24px;
+    }
+
+    &__short-desc {
+      font-size: 14px;
+    }
+
+    &__props {
+      padding-block: 24px;
+
+      dt {
+        font-size: 16px;
+      }
+
+      dd {
+        font-size: 14px;
+      }
+    }
+
+    &__add2cart {
+      flex-direction: column;
+      align-items: start;
+      gap: 12px;
+    }
+
+    &__conditions {
+      font-weight: 300;
+      font-size: 16px;
+      padding: 24px;
+      background-color: rgba(234, 230, 218, 0.4);
+      border-radius: 24px;
+    }
+
+    &__note {
+      font-size: 14px;
+    }
+
+    &__options {
+      max-width: 350px;
+      padding: 24px;
+
+      > ul {
+        gap: 12px;
+      }
+    }
+
+    &__checkbox {
+      display: none;
+
+      + label {
+        gap: 12px;
+      }
+    }
+
+    &__option-price {
+      font-weight: 300;
+      font-size: 14px;
+      color: rgba(1, 1, 1, 0.6);
+      white-space: nowrap;
+    }
+  }
+}

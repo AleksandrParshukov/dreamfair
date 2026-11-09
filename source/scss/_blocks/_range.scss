@@ -1,0 +1,28 @@
+.range {
+  --handle-width: 14px;
+
+  width: calc(100% - var(--handle-width));
+  height: 2px;
+  margin-inline: auto;
+  background-color: $white;
+  border: none !important;
+  position: relative;
+
+  .ui-slider-handle {
+    width: var(--handle-width);
+    height: var(--handle-width);
+    background-color: $white;
+    border: 2px solid $primary-blue;
+    border-radius: 100vw;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .ui-slider-range {
+    background-color: $primary-blue;
+  }
+
+  .ui-state-focus {
+    outline: none;
+  }
+}

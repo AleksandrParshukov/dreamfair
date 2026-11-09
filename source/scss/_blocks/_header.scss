@@ -1,0 +1,286 @@
+.header {
+  --burger-bg-color: #010101;
+
+  position: sticky;
+  top: 0;
+  background-color: rgba(247, 245, 240, 0.7);
+  z-index: 100;
+  transition: background-color 0.2s ease;
+
+  &--scrolled {
+    background-color: rgba(247, 245, 240, 0.96);
+  }
+
+  &__top {
+    padding: 16px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  &__logo {
+    width: 128px;
+    height: 18px;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__location {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__search {
+    --search-color: rgba(21, 21, 23, 0.6);
+    --search-bg-color: rgba(234, 230, 218, 0.2);
+    --search-border-color: rgba(48, 85, 112, 0.5);
+    --search-hover-bg-color: rgba(234, 230, 218, 0.3);
+    --search-focus-color: #151517;
+    --search-focus-bg-color: rgba(234, 230, 218, 0.4);
+    --search-focus-border-color: #305570;
+  }
+
+  &__contacts {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.3;
+    color: #151517;
+    padding-block: 9px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__callback {
+    padding-block: 8px;
+  }
+
+  &__login {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    aspect-ratio: 1;
+  }
+
+  &__popup-wrap {
+    position: relative;
+  }
+
+  &__popup {
+    padding: 16px;
+    background-color: $white;
+    border-radius: 8px;
+    position: absolute;
+    top: calc(100% + 16px);
+    z-index: 100;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease-in-out;
+
+    &.open {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    ul {
+      width: max-content;
+      max-width: 230px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    li {
+      a {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.3;
+      }
+    }
+
+    .border {
+      padding-top: 12px;
+      border-top: 1.5px solid rgba(1, 1, 1, 0.1);
+    }
+
+    &.location {
+      left: 0;
+    }
+
+    &.contacts {
+      left: 0;
+
+      ul {
+        gap: 16px;
+      }
+
+      li {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      p {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.3;
+      }
+
+      a {
+        font-weight: 300;
+        font-size: 14px;
+      }
+    }
+
+    &.acc {
+      width: 230px;
+      padding: 16px 8px;
+      right: 0;
+
+      ul {
+        width: 100%;
+      }
+
+      a {
+        font-weight: 300;
+        font-size: 14px;
+        padding-inline: 8px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+    }
+  }
+
+  &__popup-social {
+    display: flex;
+    gap: 12px;
+
+    a {
+      width: 25px;
+      height: 25px;
+      display: block;
+
+      > img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .header {
+    &__top {
+      padding: 24px;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    &__left {
+      width: 100%;
+      flex-direction: row-reverse;
+      align-items: start;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    &__logo {
+      width: 128px;
+      height: 18px;
+
+      > img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    &__location {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    &__right {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    &__search {
+      max-width: 345px;
+      width: 100%;
+
+      .search__input {
+        width: 100%;
+      }
+    }
+
+    &__contacts {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.3;
+      color: #151517;
+      padding-block: 9px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    &__callback {
+      padding-block: 8px;
+    }
+
+    &__login {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    &__icon {
+      width: 24px;
+      height: 24px;
+      aspect-ratio: 1;
+    }
+
+    &__menu-toggle {
+      width: 24px;
+      height: 24px;
+
+      &.disabled {
+        pointer-events: none;
+      }
+    }
+  }
+}
+
+@media (max-width: $xs) {
+}

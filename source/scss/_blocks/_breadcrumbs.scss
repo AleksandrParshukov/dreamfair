@@ -1,0 +1,36 @@
+.breadcrumbs {
+  --gap: 4px;
+
+  list-style: none;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: var(--gap);
+  flex-wrap: wrap;
+
+  li {
+    font-weight: 300;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    gap: var(--gap);
+
+    &::after {
+      content: '/';
+    }
+
+    &:last-child {
+      color: #151517;
+    }
+
+    a {
+      color: inherit;
+
+      &:hover {
+        color: rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+}

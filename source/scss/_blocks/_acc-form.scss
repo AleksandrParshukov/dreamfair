@@ -1,0 +1,106 @@
+.acc-form {
+  font-family: 'Geologica', sans-serif !important;
+  padding: 32px;
+  border-radius: 16px;
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  &__caption {
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    label {
+      font-weight: 300;
+      font-size: 14px;
+    }
+
+    input {
+      font: inherit;
+      font-weight: 300;
+      font-size: 14px;
+      width: 100%;
+      padding: 8px 12px;
+      background-color: #f3f3f5;
+      border: 1px solid rgba(0, 0, 0, 0);
+      border-radius: 12px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .btn {
+    font: inherit;
+    font-size: 14px;
+  }
+
+  &__password {
+    position: relative;
+  }
+
+  &__show-password {
+    color: #929293;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+
+    .slash {
+      display: none;
+    }
+
+    &.show .slash {
+      display: revert;
+    }
+  }
+
+  &__row {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+
+    > div {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      flex: 1 0 40%;
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .acc-form {
+    padding: 24px;
+    gap: 16px;
+
+    &__caption {
+      font-size: 14px;
+    }
+
+    &__group {
+      input {
+        font-size: 12px;
+      }
+    }
+
+    &__row {
+      gap: 16px;
+      flex-direction: column;
+
+      > div {
+        gap: 16px;
+      }
+    }
+  }
+}
